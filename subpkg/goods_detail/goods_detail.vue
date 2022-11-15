@@ -1,6 +1,6 @@
 <template>
     <view>
-        
+        goods_detail
     </view>
 </template>
 
@@ -11,10 +11,11 @@
                 
             };
         },
-        onLoad() {
+        onLoad(e) {
+            const goods_id = e;
             
         },
-        methods: {
+        methods:{
             
         }
     }

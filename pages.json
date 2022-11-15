@@ -2,7 +2,6 @@
     "pages": [{
         "path": "pages/home/home",
         "style": {
-            "navigationBarTitleText": "",
             "enablePullDownRefresh": false
         }
 
@@ -64,5 +63,14 @@
                 "selectedIconPath": "static/tab_icons/my-active.png"
             }
         ]
-    }
+    },
+    "subPackages": [{
+        "root": "subpkg",
+        "pages": [{
+            "path": "goods_detail/goods_detail"
+        },
+        {
+            "path": "goods_list/goods_list"
+        }]
+    }]
 }

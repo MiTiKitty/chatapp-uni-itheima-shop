@@ -1,6 +1,6 @@
 <template>
     <view>
-        
+        goods_list
     </view>
 </template>
 
@@ -10,12 +10,6 @@
             return {
                 
             };
-        },
-        onLoad() {
-            
-        },
-        methods: {
-            
         }
     }
 </script>
