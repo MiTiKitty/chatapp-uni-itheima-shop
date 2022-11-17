@@ -71,6 +71,9 @@
         },
         {
             "path": "goods_list/goods_list"
+        },
+        {
+            "path": "search/search"
         }]
     }]
 }

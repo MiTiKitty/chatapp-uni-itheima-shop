@@ -1,5 +1,8 @@
 <template>
     <view>
+        <view class="search-box">
+            <my-search @click="gotoSearch"></my-search>
+        </view>
         <!-- 轮播图区域 -->
         <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
             <!-- 循环渲染轮播图的 item 项 -->
@@ -39,7 +42,6 @@
                     </view>
                 </view>
             </view>
-
         </view>
     </view>
 </template>
@@ -119,11 +121,15 @@
                 }
                 res.message.forEach(floor => {
                     floor.product_list.forEach(prod => {
-                        prod.url = '/subpkg/goods_list/goods_list?' + prod.navigator_url.split('?')[
-                            1]
+                        prod.url = '/subpkg/goods_list/goods_list?' + prod.navigator_url.split('?')[1]
                     })
                 })
                 this.floorList = res.message
+            },
+            gotoSearch() {
+                uni.navigateTo({
+                    url: '/subpkg/search/search'
+                })
             }
         }
     }
@@ -215,5 +221,11 @@
             }
 
         }
+    }
+
+    .search-box {
+        position: sticky;
+        z-index: 999;
+        top: 0;
     }
 </style>
